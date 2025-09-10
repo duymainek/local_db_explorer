@@ -201,7 +201,8 @@ class _DatabaseViewState extends State<_DatabaseView> {
             children: [
               Expanded(
                 child: DropdownButtonFormField<String>(
-                  initialValue: _selectedCollection,
+                  // ignore: deprecated_member_use
+                  value: _selectedCollection,
                   decoration: const InputDecoration(
                     labelText: 'Collection',
                     border: OutlineInputBorder(),
