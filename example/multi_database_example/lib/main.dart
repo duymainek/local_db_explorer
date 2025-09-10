@@ -304,7 +304,10 @@ class _MyHomePageState extends State<MyHomePage> {
         await _prefs!.clear();
         await _insertPreferencesData();
       }
-    } catch (e) {}
+    } catch (e) {
+      // Ignore initialization errors for demo purposes
+      debugPrint('SharedPreferences initialization error: $e');
+    }
   }
 
   @override

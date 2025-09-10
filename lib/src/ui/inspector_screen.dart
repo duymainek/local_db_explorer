@@ -81,7 +81,6 @@ class _DatabaseViewState extends State<_DatabaseView> {
   String _searchQuery = '';
   int _currentPage = 0;
   static const int _pageSize = 20; // Smaller page size for mobile
-  bool _showCollections = true;
 
   @override
   void initState() {
@@ -131,11 +130,12 @@ class _DatabaseViewState extends State<_DatabaseView> {
     );
   }
 
-  void _toggleCollectionsView() {
-    setState(() {
-      _showCollections = !_showCollections;
-    });
+  void _showMessage(String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(message)),
+    );
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -202,7 +202,7 @@ class _DatabaseViewState extends State<_DatabaseView> {
             children: [
               Expanded(
                 child: DropdownButtonFormField<String>(
-                  value: _selectedCollection,
+                  initialValue: _selectedCollection,
                   decoration: const InputDecoration(
                     labelText: 'Collection',
                     border: OutlineInputBorder(),
@@ -513,8 +513,9 @@ class _DatabaseViewState extends State<_DatabaseView> {
 
   String _formatValue(dynamic value) {
     if (value == null) return 'null';
-    if (value is String)
+    if (value is String) {
       return value.length > 30 ? '${value.substring(0, 30)}...' : value;
+    }
     if (value is Map || value is List) {
       final jsonStr = jsonEncode(value);
       return jsonStr.length > 30 ? '${jsonStr.substring(0, 30)}...' : jsonStr;
@@ -540,9 +541,7 @@ class _DatabaseViewState extends State<_DatabaseView> {
               await widget.adapter.put(_selectedCollection!, updatedRecord);
               _loadData(); // Refresh data
               if (mounted) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Record updated successfully')),
-                );
+                _showMessage('Record updated successfully');
               }
             } catch (e) {
               if (mounted) {
@@ -575,10 +574,7 @@ class _DatabaseViewState extends State<_DatabaseView> {
                 await widget.adapter.delete(_selectedCollection!, key);
                 _loadData(); // Refresh data
                 if (mounted) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                        content: Text('Record deleted successfully')),
-                  );
+                  _showMessage('Record deleted successfully');
                 }
               } catch (e) {
                 if (mounted) {

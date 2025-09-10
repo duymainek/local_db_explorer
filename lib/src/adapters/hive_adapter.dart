@@ -108,11 +108,8 @@ class HiveAdapter extends DBAdapter {
       }
 
       // Extract the key
-      dynamic key = record['_hive_key'];
-      if (key == null) {
-        // Generate a new key if not provided
-        key = DateTime.now().millisecondsSinceEpoch.toString();
-      }
+      dynamic key = record['_hive_key'] ??
+          DateTime.now().millisecondsSinceEpoch.toString();
 
       // Remove the meta key from the record
       final cleanRecord = Map<String, dynamic>.from(record);
