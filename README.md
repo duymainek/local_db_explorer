@@ -8,6 +8,14 @@
   <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT License">
 </p>
 
+## 📱 Preview
+
+<p align="center">
+  <img src="https://github.com/duymainek/local_db_explorer/blob/main/preview/deedb1558ba500fb59b4.jpg" alt="Local DB Explorer Preview" width="300">
+</p>
+
+*Mobile-optimized database inspector with beautiful UI for debugging your local storage*
+
 ## ✅ Implementation Status
 
 | Database | Status | How to Use |
