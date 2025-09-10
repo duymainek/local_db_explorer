@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `SqfliteAdapter` with full read/write support for SQLite databases
 - `HiveAdapter` stub implementation (ready for extension)
 - `SharedPreferencesAdapter` stub implementation (ready for extension)
-- `DBViewer` controller class with navigation management
+- `DBExplorer` controller class with navigation management
 - `InspectorScreen` full-screen UI with mobile-optimized design
 - Debug-only operation for security (no-op in release builds)
 - Navigation-based approach using standard Flutter patterns
