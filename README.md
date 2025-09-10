@@ -217,13 +217,13 @@ git clone https://github.com/your-repo/local_db_explorer.git
 cd local_db_explorer/example && flutter run
 
 # Hive example  
-cd examples/hive_example && flutter pub get && flutter run
+cd example/hive_example && flutter pub get && flutter run
 
 # SharedPreferences example
-cd examples/shared_preferences_example && flutter pub get && flutter run
+cd example/shared_preferences_example && flutter pub get && flutter run
 
 # Multi-database example
-cd examples/multi_database_example && flutter pub get && flutter run
+cd example/multi_database_example && flutter pub get && flutter run
 ```
 
 ## ❓ Frequently Asked Questions
