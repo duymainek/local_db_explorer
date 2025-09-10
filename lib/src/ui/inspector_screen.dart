@@ -136,7 +136,6 @@ class _DatabaseViewState extends State<_DatabaseView> {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
     final isPortrait =
