@@ -1,0 +1,25 @@
+name: local_db_explorer
+description: A lightweight in-app database viewer/inspector for debugging local storage (Sqflite, Hive, SharedPreferences).
+version: 1.0.0
+homepage: https://github.com/duymainek/local_db_explorer
+repository: https://github.com/duymainek/local_db_explorer
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+topics:
+  - database
+  - inspector
+  - debug
+  - debugging
+  - dbviewer

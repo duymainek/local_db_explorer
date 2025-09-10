@@ -1,0 +1,14 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # Additional rules for better code quality
+    prefer_single_quotes: true
+    prefer_const_constructors: true
+    prefer_const_literals_to_create_immutables: true
+    avoid_print: false  # Allow print statements for debugging
+    
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
