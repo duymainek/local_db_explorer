@@ -11,7 +11,7 @@
 ## 📱 Preview
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/duymainek/local_db_explorer/main/preview/deedb1558ba500fb59b4.jpg" alt="Local DB Explorer Preview" width="300">
+  <img src="https://raw.githubusercontent.com/duymainek/local_db_explorer/main/preview/preview.gif" alt="Local DB Explorer Preview" width="300">
 </p>
 
 *Mobile-optimized database inspector with beautiful UI for debugging your local storage*
